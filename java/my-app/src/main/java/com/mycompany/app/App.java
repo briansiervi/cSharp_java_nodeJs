@@ -6,8 +6,15 @@ package com.mycompany.app;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( final String[] args)
     {
-        System.out.println( "Hello World!" );
+        Friend a = new Friend("A");
+        Friend b = new Friend("B");
+        Friend c = new Friend("C");
+
+        a.addFriendship(b);
+        b.addFriendship(c);
+
+        System.out.println(a.canBeConnected(c));
     }
 }
